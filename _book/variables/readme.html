@@ -1,0 +1,719 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>像编写Javacript一样来写样式-变量-zhenggl</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="像编写Javacript一样来写样式-变量"><meta name="keywords" content="zhenggl, sass, scss, css, style, 郑耿林">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="郑耿林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../interpolation/readme.html" />
+    
+    
+    <link rel="prev" href="../style-rules/readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.91temaichang.com" target="_blank" rel="nofollow" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface/readme.html">
+            
+                <a href="../preface/readme.html">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../syntax/readme.html">
+            
+                <a href="../syntax/readme.html">
+            
+                    
+                    语法知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../style-rules/readme.html">
+            
+                <a href="../style-rules/readme.html">
+            
+                    
+                    样式规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../interpolation/readme.html">
+            
+                <a href="../interpolation/readme.html">
+            
+                    
+                    插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../at-rules/readme.html">
+            
+                <a href="../at-rules/readme.html">
+            
+                    
+                    "艾特"规则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../at-rules/at-use/readme.html">
+            
+                <a href="../at-rules/at-use/readme.html">
+            
+                    
+                    @use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../at-rules/at-forward/readme.html">
+            
+                <a href="../at-rules/at-forward/readme.html">
+            
+                    
+                    @forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../at-rules/at-import/readme.html">
+            
+                <a href="../at-rules/at-import/readme.html">
+            
+                    
+                    @import
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../at-rules/at-mixin-and-include/readme.html">
+            
+                <a href="../at-rules/at-mixin-and-include/readme.html">
+            
+                    
+                    @mixin-@include
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../at-rules/at-function/readme.html">
+            
+                <a href="../at-rules/at-function/readme.html">
+            
+                    
+                    @function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../at-rules/at-extend/readme.html">
+            
+                <a href="../at-rules/at-extend/readme.html">
+            
+                    
+                    @extend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../at-rules/at-error/readme.html">
+            
+                <a href="../at-rules/at-error/readme.html">
+            
+                    
+                    @error
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../at-rules/at-warn/readme.html">
+            
+                <a href="../at-rules/at-warn/readme.html">
+            
+                    
+                    @warn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../at-rules/at-debug/readme.html">
+            
+                <a href="../at-rules/at-debug/readme.html">
+            
+                    
+                    @debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../at-rules/at-at-root/readme.html">
+            
+                <a href="../at-rules/at-at-root/readme.html">
+            
+                    
+                    @at-root
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../at-rules/flow-control/readme.html">
+            
+                <a href="../at-rules/flow-control/readme.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../at-rules/from-css/readme.html">
+            
+                <a href="../at-rules/from-css/readme.html">
+            
+                    
+                    与css的兼容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../values/readme.html">
+            
+                <a href="../values/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../operators/readme.html">
+            
+                <a href="../operators/readme.html">
+            
+                    
+                    操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../build-in-modules/readme.html">
+            
+                <a href="../build-in-modules/readme.html">
+            
+                    
+                    预设库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../sass-in-boostrap/readme.html">
+            
+                <a href="../sass-in-boostrap/readme.html">
+            
+                    
+                    sass在bootstrap中的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="_blank" rel="nofollow" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >变量</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h1>
+<blockquote>
+<p>sass&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4EE5;$&#x5F00;&#x5934;&#xFF0C;&#x7136;&#x540E;&#x662F;&#x5B57;&#x6BCD;+&#x6570;&#x5B57;+&#x7B26;&#x53F7;&#x6765;&#x547D;&#x540D;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x53C8;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x9700;&#x8981;mark&#x4E00;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#xFF1A;&#x4E2D;&#x6A2A;&#x7EBF;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x4E0B;&#x6A2A;&#x7EBF;&#x7684;&#x53D8;&#x91CF;&#x5728;sass&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5C5E;&#x4E8E;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF01;&#xFF01;
+sass&#x53D8;&#x91CF;&#xFF0C;&#x4F5C;&#x4E3A;sass&#x9886;&#x57DF;&#x5185;&#x7684;&#x91CD;&#x8981;&#x4EF7;&#x503C;&#x7684;&#x5DE5;&#x5177;&#x4E4B;&#x4E00;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x5173;&#x4E8E;&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x5177;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x5173;&#x8054;&#x52A8;&#x4F5C;&#x7684;&#x7EDF;&#x4E00;&#x53E3;&#x5F84;&#xFF0C;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x4E3B;&#x9898;&#x8272;&#xFF0C;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x7F16;&#x8BD1;&#x51FA;&#x5168;&#x5C40;&#x7EDF;&#x4E00;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x7ED3;&#x679C;&#xFF01;</p>
+</blockquote>
+<h3 id="&#x5B9A;&#x4E49;&#x4E0E;&#x4F7F;&#x7528;">&#x5B9A;&#x4E49;&#x4E0E;&#x4F7F;&#x7528;</h3>
+<pre><code class="lang-scss">  <span class="hljs-variable">$x</span>: <span class="hljs-number">#123456</span>;
+</code></pre>
+<p><img align="absmiddle" alt=":star2:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/star2.png" title=":star2:"> &#x53D8;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x53EA;&#x80FD;&#x662F;<strong>&#x5728;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5728;&#x903B;&#x8F91;&#x8FD0;&#x7B97;</strong>&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x91CC;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5C06;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x4E00;&#x4E2A;&#x6548;&#x679C;(<strong>&#x503C;&#x7684;&#x8986;&#x76D6;&#x4F7F;&#x7528;</strong>)</p>
+<p><img align="absmiddle" alt=":frowning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/frowning.png" title=":frowning:"> &#x4E0E;css&#x53D8;&#x91CF;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<ol>
+<li>sass&#x53D8;&#x91CF;&#x662F;&#x88AB;&#x4E0E;&#x5904;&#x7406;&#x5668;&#x7F16;&#x8BD1;&#x8F93;&#x51FA;&#x6700;&#x7EC8;&#x76EE;&#x6807;&#x6837;&#x5F0F;&#x7684;&#xFF0C;&#x800C;css&#x53D8;&#x91CF;&#x5219;&#x662F;&#x539F;&#x6837;&#x8F93;&#x51FA;;</li>
+<li>css&#x53D8;&#x91CF;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x800C;sass&#x53D8;&#x91CF;&#x5219;&#x662F;&#x6BCF;&#x4E00;&#x6B21;&#x77AC;&#x95F4;&#x53EA;&#x80FD;&#x6709;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#xFF1B;</li>
+<li>css&#x53D8;&#x91CF;&#x662F;&#x5168;&#x5C40;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x5168;&#x5C40;&#x6240;&#x6709;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x800C;sass&#x53D8;&#x91CF;&#x5219;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x751F;&#x6548;&#xFF0C;&#x4E00;&#x65E6;&#x6539;&#x53D8;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x8DDD;&#x79BB;&#x8BE5;&#x53D8;&#x91CF;&#x6700;&#x8FD1;&#x4EE5;&#x53CA;&#x540E;&#x7EED;&#x7684;&#x5C06;&#x4F1A;&#x53D7;&#x5230;&#x5F71;&#x54CD;</li>
+</ol>
+<h3 id="&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x9ED8;&#x8BA4;&#x503C;">&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</h3>
+<blockquote>
+<p>&#x8FD9;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x4E8E;ES6.0&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E00;&#x822C;&#xFF0C;sass&#x53D8;&#x91CF;&#x5728;&#x58F0;&#x660E;&#x65F6;&#xFF0C;&#x53EF;&#x5B9A;&#x4E49;&#x4E00;&#x9ED8;&#x8BA4;&#x503C;(&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>!default</code>)&#x6807;&#x8BC6;&#x6765;&#x914D;&#x7F6E;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x82E5;&#x65E0;&#x5B9A;&#x4E49;&#x8BE5;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x662F;null&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;
+&#x540C;&#x65F6;&#x5F53;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x5E93;&#x5171;&#x7ED9;&#x5176;&#x4ED6;sass&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9488;&#x5BF9;&#x8BE5;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x53EF;&#x884C;&#x6027;&#x914D;&#x7F6E;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x5E93;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5219;&#x4E00;&#x822C;&#x662F;&#x4F7F;&#x7528;<code>@rule library_name with (&lt;key&gt;: &lt;value&gt;)</code>&#xFF0C;&#x4F20;&#x9012;&#x8FDB;&#x6765;&#x7684;&#x53D8;&#x91CF;&#x503C;&#xFF0C;&#x5219;&#x5C06;&#x4F1A;&#x66FF;&#x4EE3;&#x539F;&#x6765;&#x7684;&#x5E93;&#x4E2D;
+&#x7684;&#x9ED8;&#x8BA4;&#x503C;</p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-comment">// _library.scss</span>
+<span class="hljs-variable">$black</span>: <span class="hljs-number">#000</span> !default;
+<span class="hljs-variable">$border-radius</span>: <span class="hljs-number">0.5rem</span> !default;
+
+<span class="hljs-selector-tag">code</span>{
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$border-radius</span>;
+}
+<span class="hljs-comment">// demo1.scss</span>
+@use <span class="hljs-string">&apos;library&apos;</span> with (
+  <span class="hljs-variable">$black</span>: <span class="hljs-number">#222</span>,
+  <span class="hljs-variable">$border-radius</span>: 0.1rem
+);
+</code></pre>
+<p><img src="&#x9ED8;&#x8BA4;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x503C;.png" alt="&#x9ED8;&#x8BA4;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x503C;"></p>
+<h3 id="&#x5E93;&#x4E2D;&#x7684;&#x5E38;&#x91CF;">&#x5E93;&#x4E2D;&#x7684;&#x5E38;&#x91CF;</h3>
+<blockquote>
+<p>&#x4E0E;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x4E86;<code>!default</code>&#x6807;&#x8BC6;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x53D8;&#x91CF;&#x4E0D;&#x5141;&#x8BB8;&#x88AB;&#x5916;&#x90E8;&#x6240;&#x6539;&#x53D8;&#xFF0C;&#x800C;&#x662F;&#x53EA;&#x80FD;&#x7B80;&#x5355;&#x7684;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x800C;&#x5DF2;&#xFF0C;&#x8FD9;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x4E8E;js&#x4E2D;&#x7684;const&#x53D8;&#x91CF;&#xFF0C;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#xFF0C;&#x5C31;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</p>
+</blockquote>
+<pre><code class="lang-scss">@use <span class="hljs-string">&quot;sass:math&quot;</span> as math;
+@<span class="hljs-keyword">debug</span> math.<span class="hljs-variable">$pi</span>;
+<span class="hljs-comment">// &#x4EE5;&#x4E0B;&#x5C06;&#x76F4;&#x63A5;&#x62A5;&#x9519;</span>
+math.<span class="hljs-variable">$pi</span>: <span class="hljs-number">0</span>;
+</code></pre>
+<h3 id="&#x4F5C;&#x7528;&#x57DF;">&#x4F5C;&#x7528;&#x57DF;</h3>
+<blockquote>
+<p>&#x4E0E;js&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x57DF;&#x7C7B;&#x4F3C;&#xFF0C;sass&#x53D8;&#x91CF;&#x4E5F;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7C7B;&#x4F3C;&#x7684;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x57DF;&#x6548;&#x679C;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x6A21;&#x5757;&#x4E2D;&#x9876;&#x90E8;&#x4F4D;&#x7F6E;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5C06;&#x4F1A;&#x88AB;&#x6A21;&#x5757;&#x5E94;&#x7528;&#x8005;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x4E0A;&#x4E0B;&#x6587;&#x53EF;&#x8BBF;&#x95EE;&#x5230;(&#x4F46;&#x8FD9;&#x4EC5;&#x9650;&#x4E8E;&#x6837;&#x5F0F;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;)</p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-variable">$global-variable</span>: global value;
+<span class="hljs-selector-class">.content</span>{
+  <span class="hljs-variable">$local-variable</span>: local value;
+  global: <span class="hljs-variable">$global-variable</span>;
+  local: <span class="hljs-variable">$local-variable</span>;
+}
+<span class="hljs-selector-class">.side</span>{
+  global: <span class="hljs-variable">$global-variable</span>;
+}
+</code></pre>
+<p><img align="absmiddle" alt=":warning:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:">
+&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E0D;&#x540C;&#x540D;&#x53D8;&#x91CF;&#x7684;&#x5728;&#x666E;&#x901A;&#x7684;&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x662F;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;</p>
+<h4 id="&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x4E0E;&#x5C40;&#x90E8;&#x4F5C;&#x7528;&#x57DF;">&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x4E0E;&#x5C40;&#x90E8;&#x4F5C;&#x7528;&#x57DF;</h4>
+<blockquote>
+<p>&#x1F914;
+&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5C40;&#x90E8;&#x6837;&#x5F0F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5168;&#x5C40;&#x6216;&#x8005;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x4E2D;&#x7684;sass&#x53D8;&#x91CF;&#x540C;&#x540D;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x91CC;&#x53C8;&#x4F1A;&#x53D1;&#x751F;&#x600E;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x60C5;&#x51B5;&#x5462;&#xFF1F;
+&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x6240;&#x793A;&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-variable">$global-variable</span>: global value;
+<span class="hljs-selector-class">.content</span>{
+  <span class="hljs-variable">$global-variable</span>: local value;
+  global: <span class="hljs-variable">$global-variable</span>;
+}
+<span class="hljs-selector-class">.side</span>{
+  global: <span class="hljs-variable">$global-variable</span>;
+}
+</code></pre>
+<p><img src="&#x5C40;&#x90E8;&#x6837;&#x5F0F;&#x5206;&#x79BB;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x53D8;&#x91CF;.png" alt="&#x5C40;&#x90E8;&#x6837;&#x5F0F;&#x5206;&#x79BB;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x53D8;&#x91CF;"></p>
+<p><img align="absmiddle" alt=":star2:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/star2.png" title=":star2:">
+&#x4ECE;&#x4E0A;&#x8FF0;&#x7F16;&#x8BD1;&#x7ED3;&#x679C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5F53;<strong>&#x6837;&#x5F0F;&#x5C5E;&#x6027;</strong>&#x4E2D;&#x5185;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x5916;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x53D8;&#x91CF;&#x540C;&#x540D;&#x65F6;&#xFF0C;<strong>&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x4E2D;&#x91CD;&#x65B0;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;</strong>&#x5C06;&#x4F1A;&#x5F53;&#x4F5C;&#x662F;&#x521B;&#x5EFA;
+&#x5F53;&#x524D;&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;<strong>&#x65B0;&#x53D8;&#x91CF;</strong>&#x5E76;&#x6765;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#xFF01;&#xFF01;&#xFF01;
+&#x8FD9;&#x91CC;&#x5FC5;&#x987B;&#x8981;&#x5F3A;&#x8C03;&#x7684;&#x662F;&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x4EE3;&#x7801;&#x4E0B;&#x6240;&#x5F62;&#x6210;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x4E0B;&#x9762;:point_down:&#x7684;&#x7531;&#x6D41;&#x7A0B;&#x5173;&#x952E;&#x8BCD;&#x6240;&#x5F62;&#x6210;&#x7684;&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x7684;&#x540C;&#x4E00;&#x4E2A;sass&#x53D8;&#x91CF;&#xFF0C;
+&#x5177;&#x4F53;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p><img align="absmiddle" alt=":stars:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/stars.png" title=":stars:">
+&#x1F914;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x6837;&#x5F0F;&#x5C5E;&#x6027;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x5916;&#x5C42;sass&#x53D8;&#x91CF;&#x7684;&#x8BDD;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x5462;&#xFF1F;&#x5F53;&#x7136;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6807;&#x8BC6;&#x7B26;<code>!global</code>&#x6765;&#x5BF9;&#x5916;&#x5C42;sass&#x53D8;&#x91CF;
+&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#xFF0C;&#x4F46;&#x8FD9;&#x91CC; <img align="absmiddle" alt=":u6709:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/u6709.png" title=":u6709:">
+&#x4E00;&#x4E2A;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#xFF1A;<strong>&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x4E2D;&#x6240;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x5916;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x8303;&#x56F4;&#x5185;&#x6709;&#x6548;</strong></p>
+<h4 id="&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;">&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;</h4>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>@rule</code>&#x6D41;&#x7A0B;&#x6807;&#x8BC6;&#x7B26;&#x6240;&#x5F62;&#x6210;&#x7684;&#x57FA;&#x4E8E;&#x903B;&#x8F91;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x6240;&#x5F62;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6BD4;&#x5982;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>@if&#x3001;@while&#x3001;@each</code>&#x7B49;&#x6240;&#x5F62;&#x6210;&#x7684;&#x5C40;&#x90E8;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;
+&#x8FD9;&#x91CC;&#x4E0E;&#x4E0A;&#x9762; <img align="absmiddle" alt=":point_up:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_up.png" title=":point_up:"> &#x7684;&#x6837;&#x5F0F;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x53D8;&#x91CF; <img align="absmiddle" alt=":u6709:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/u6709.png" title=":u6709:">
+&#x4E00;&#x4E2A;&#x660E;&#x663E;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;sass&#x53D8;&#x91CF;&#x4E0E;&#x5916;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x53D8;&#x91CF;<strong>&#x5171;&#x4EAB;</strong>&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4ED6;&#x4EEC;&#x62E5;&#x6709;&#x516C;&#x5171;&#x7684;&#x503C;&#xFF0C;&#x65E0;&#x9700;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>!global</code>&#x6807;&#x8BC6;&#x7B26;
+&#x6765;&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-variable">$dark-theme</span>: true !default;
+<span class="hljs-variable">$primary-color</span>: <span class="hljs-number">#f8bbd0</span> !default;
+<span class="hljs-variable">$accent-color</span>: <span class="hljs-number">#6a1b9a</span> !default;
+
+@<span class="hljs-keyword">if</span> <span class="hljs-variable">$dark-theme</span> {
+  <span class="hljs-variable">$primary-color</span>: darken(<span class="hljs-variable">$primary-color</span>, <span class="hljs-number">60%</span>);
+  <span class="hljs-variable">$accent-color</span>: lighten(<span class="hljs-variable">$accent-color</span>, <span class="hljs-number">60%</span>);
+}
+
+<span class="hljs-selector-class">.button</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$primary-color</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$accent-color</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+}
+</code></pre>
+<p><img src="&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x53D8;&#x91CF;&#x8BBF;&#x95EE;.png" alt="&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x53D8;&#x91CF;&#x8BBF;&#x95EE;"></p>
+<p><img align="absmiddle" alt=":stars:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/stars.png" title=":stars:"> &#x90A3;&#x4E48;&#x8FD9;&#x91CC;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A; <img align="absmiddle" alt=":u6709:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/u6709.png" title=":u6709:"> &#x8FD9;&#x6837;&#x5B50;&#x7684;&#x533A;&#x522B;&#x5462;&#xFF1F;--&gt;&#x6837;&#x5F0F;&#x4F5C;&#x7528;&#x57DF;&#x7684; <img align="absmiddle" alt=":new:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/new.png" title=":new:">
+&#x53D8;&#x91CF;&#x4E0E;&#x6D41;&#x7A0B;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF01;&#xFF01; &#x56E0;&#x4E3A;&#x8FD9;&#x4E2A; <img align="absmiddle" alt=":u6709:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/u6709.png" title=":u6709:">
+&#x4E00;&#x4E2A;&#x5927;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#xFF1A;<strong>sass&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x7F16;&#x8BD1;&#x7684;&#x8BED;&#x8A00;</strong>&#xFF0C;&#x7B80;&#x5355;&#x5730;&#x7406;&#x89E3;&#xFF0C;&#x5C31;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;js&#x4E0E;css&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x8FB9;&#x754C;&#xFF0C;js&#x4EE3;&#x7801;&#x80AF;&#x5B9A;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5230;&#x4F5C;&#x7528;&#x57DF;&#x8303;&#x56F4;&#x4E0B;&#x7684;
+&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x4F5C;&#x7528;&#x57DF;&#x53D8;&#x91CF;&#x7684;&#x57FA;&#x672C;&#x89C4;&#x5219;&#xFF0C;&#x800C;css&#x5219;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x5C31;&#x8FD1;&#x539F;&#x5219;&#xFF0C;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x4F5C;&#x4E3A;&#x5F53;&#x524D;&#x6837;&#x5F0F;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;
+<img align="absmiddle" alt=":new:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/new.png" title=":new:"> &#x53D8;&#x91CF;&#x800C;&#x5DF2;&#x3002;</p>
+<h3 id="&#x9AD8;&#x7EA7;&#x53D8;&#x91CF;&#x51FD;&#x6570;">&#x9AD8;&#x7EA7;&#x53D8;&#x91CF;&#x51FD;&#x6570;</h3>
+<blockquote>
+<p>sass&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5BF9;&#x9488;&#x5BF9;&#x53D8;&#x91CF;&#x7684;&#x51FD;&#x6570;</p>
+<ol>
+<li>meta.variable-exists()&#xFF1A;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x6216;&#x8005;&#x5BF9;&#x8C61;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x67D0;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x82E5;
+<img align="absmiddle" alt=":u6709:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/u6709.png" title=":u6709:"> &#x5B9A;&#x4E49;&#x5219;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x653E;&#x56DE;false</li>
+<li>meta.global-variable-exists()&#xFF1A;&#x4E0E;&#x4E0A;&#x8FF0;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x5224;&#x65AD;&#x7684;&#x662F;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#x7684;</li>
+</ol>
+</blockquote>
+<p><footer class="footer"><div class="footer__container--normal" alt="
+https://www.91temaichang.com/variables/readme.html
+">
+<img src="data:image/gif;base64,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" width="170" height="170"></div></footer></p>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">91temaichang.com<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x3001;APP&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#x3001;&#x67B6;&#x6784;&#x5E08;&#x3001;&#x9879;&#x76EE;&#x7BA1;&#x7406;</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; &#x90D1;&#x803F;&#x6797; all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">&#x6700;&#x65B0;&#x66F4;&#x65B0;&#x4E8E;</span>
+2022-06-30 06:30:54
+</p></div></div><div class="box__issues">
+
+</div>
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../style-rules/readme.html" class="navigation navigation-prev " aria-label="Previous page: 样式规则">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../interpolation/readme.html" class="navigation navigation-next " aria-label="Next page: 插值">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"变量","level":"1.5","depth":1,"next":{"title":"插值","level":"1.6","depth":1,"path":"interpolation/readme.md","ref":"interpolation/readme.md","articles":[]},"previous":{"title":"样式规则","level":"1.4","depth":1,"path":"style-rules/readme.md","ref":"style-rules/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","back-to-top-button","custom-favicon","chapter-fold","code","donate","insert-logo","page-copyright","codepens","search-pro","pageview-count","advanced-emoji","page-toc-button","seo","devops"],"root":"","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"codepens":{},"search-pro":{},"page-copyright":{"wisdom":"前端开发者、APP开发工程师、架构师、项目管理","noPowered":true,"copyright":"Copyright &#169; 郑耿林","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"91temaichang.com","baseUri":"https://www.91temaichang.com/","copyrightColor":"#666","description":"最新更新于"},"codepen":{"height":600,"theme":13200,"description":"改造不一样的css","defaultTab":"html"},"code":{"copyButtons":false},"donate":{"title":"","button":"捐赠","wechat":"/donate/wechat_code.png","alipay":"/donate/alipay_code.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"favicon.png","page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"seo":{"titlePrefix":"像编写Javacript一样来写样式-","titleSuffix":"-zhenggl","descriptionPrefix":"像编写Javacript一样来写样式","keywords":"zhenggl, sass, scss, css, style, 郑耿林"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"devops":{"bd_token":"28deffb3f03b6aebaee957d706ef8068","google_search":"","google_analytics":"","livere_token":""},"insert-logo":{"url":"/favicon.png","style":"background: none;"}},"theme":"default","author":"郑耿林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"像编写Javacript一样来写样式","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.91temaichang.com"}},"gitbook":"*","description":"从不同角度解析关于sass知识点，结合实际项目实战来掌握学习sass"},"file":{"path":"variables/readme.md","mtime":"2022-06-29T22:30:54.580Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-06T02:44:15.595Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codepens/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-devops/devops.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

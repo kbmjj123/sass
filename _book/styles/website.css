@@ -1,0 +1,24 @@
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(8,8,8,.1);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(8,8,8,.3);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(8,8,8,.8);
+}
+.gitbook-link {
+    display: none !important;
+}
+
+.book-logo img {
+    width: 50px;
+}

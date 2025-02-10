@@ -1,0 +1,51 @@
+{
+  "name": "filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "gitbook init",
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "upload": "babel-node deploy.js"
+  },
+  "author": "郑耿林",
+  "license": "ISC",
+  "babel": {
+    "presents": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining"
+    ]
+  },
+  "dependencies": {
+    "gitbook-plugin-advanced-emoji": "^0.2.2",
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-ancre-navigation": "^1.0.0",
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-chapter-fold": "0.0.4",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-codepens": "0.0.7",
+    "gitbook-plugin-custom-favicon": "0.0.4",
+    "gitbook-plugin-devops": "^1.0.3",
+    "gitbook-plugin-donate": "^1.0.2",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-insert-logo": "^0.1.5",
+    "gitbook-plugin-page-copyright": "^1.0.8",
+    "gitbook-plugin-page-toc-button": "^0.1.1",
+    "gitbook-plugin-pageview-count": "^1.0.1",
+    "gitbook-plugin-popup": "0.0.1",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-seo": "^1.0.0",
+    "gitbook-plugin-todo": "^0.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "ssh2-sftp-client": "^9.0.2"
+  }
+}

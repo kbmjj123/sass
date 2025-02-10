@@ -1,0 +1,625 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>像编写Javacript一样来写样式-sass在bootstrap中的使用-zhenggl</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="像编写Javacript一样来写样式-sass在bootstrap中的使用"><meta name="keywords" content="zhenggl, sass, scss, css, style, 郑耿林">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="郑耿林">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../build-in-modules/readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.91temaichang.com" target="_blank" rel="nofollow" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface/readme.html">
+            
+                <a href="../preface/readme.html">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../syntax/readme.html">
+            
+                <a href="../syntax/readme.html">
+            
+                    
+                    语法知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../style-rules/readme.html">
+            
+                <a href="../style-rules/readme.html">
+            
+                    
+                    样式规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../variables/readme.html">
+            
+                <a href="../variables/readme.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../interpolation/readme.html">
+            
+                <a href="../interpolation/readme.html">
+            
+                    
+                    插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../at-rules/readme.html">
+            
+                <a href="../at-rules/readme.html">
+            
+                    
+                    "艾特"规则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../at-rules/at-use/readme.html">
+            
+                <a href="../at-rules/at-use/readme.html">
+            
+                    
+                    @use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../at-rules/at-forward/readme.html">
+            
+                <a href="../at-rules/at-forward/readme.html">
+            
+                    
+                    @forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../at-rules/at-import/readme.html">
+            
+                <a href="../at-rules/at-import/readme.html">
+            
+                    
+                    @import
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../at-rules/at-mixin-and-include/readme.html">
+            
+                <a href="../at-rules/at-mixin-and-include/readme.html">
+            
+                    
+                    @mixin-@include
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../at-rules/at-function/readme.html">
+            
+                <a href="../at-rules/at-function/readme.html">
+            
+                    
+                    @function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../at-rules/at-extend/readme.html">
+            
+                <a href="../at-rules/at-extend/readme.html">
+            
+                    
+                    @extend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../at-rules/at-error/readme.html">
+            
+                <a href="../at-rules/at-error/readme.html">
+            
+                    
+                    @error
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../at-rules/at-warn/readme.html">
+            
+                <a href="../at-rules/at-warn/readme.html">
+            
+                    
+                    @warn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../at-rules/at-debug/readme.html">
+            
+                <a href="../at-rules/at-debug/readme.html">
+            
+                    
+                    @debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../at-rules/at-at-root/readme.html">
+            
+                <a href="../at-rules/at-at-root/readme.html">
+            
+                    
+                    @at-root
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../at-rules/flow-control/readme.html">
+            
+                <a href="../at-rules/flow-control/readme.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../at-rules/from-css/readme.html">
+            
+                <a href="../at-rules/from-css/readme.html">
+            
+                    
+                    与css的兼容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../values/readme.html">
+            
+                <a href="../values/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../operators/readme.html">
+            
+                <a href="../operators/readme.html">
+            
+                    
+                    操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../build-in-modules/readme.html">
+            
+                <a href="../build-in-modules/readme.html">
+            
+                    
+                    预设库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    sass在bootstrap中的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="_blank" rel="nofollow" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >sass在bootstrap中的使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sass&#x5728;bootstrap&#x4E2D;&#x7684;&#x4F7F;&#x7528;">sass&#x5728;bootstrap&#x4E2D;&#x7684;&#x4F7F;&#x7528;</h1>
+<blockquote>
+<p>&#x5728;&#x5B66;&#x4E60;&#x5B8C;&#x6210;&#x4E86;&#x5173;&#x4E8E;sass&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x56DE;&#x5230;&#x6700;&#x521D;&#x7684;&#x539F;&#x70B9;&#x6765;&#x63D0;&#x95EE;&#xFF1A;sass&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;&#x4EC0;&#x4E48;&#xFF1F;&#x5982;&#x4F55;&#x4F7F;&#x7528;sass&#xFF1F;
+&#x5728;&#x5B66;&#x4E60;&#x4E86;bootstrap&#x7684;&#x6E90;&#x7801;&#x4E4B;&#x540E;&#xFF0C;&#x501F;&#x9274;&#x4E8E;sass&#x5728;&#x5B83;&#x91CC;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x8FB9;&#x6574;&#x7406;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x8981;&#x70B9;&#xFF0C;&#x53EF;&#x4F9B;&#x81EA;&#x5DF1;&#x5E73;&#x65F6;&#x5728;&#x65E5;&#x5E38;&#x9879;&#x76EE;coding
+&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x66F4;&#x597D;&#x5730;&#x6765;&#x8BBE;&#x8BA1;css&#xFF0C;&#x7F16;&#x5199;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7B80;&#x4FBF;&#x7684;sass
+script&#x6765;&#x7EF4;&#x62A4;&#x7CFB;&#x7EDF;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7684;&#x63A7;&#x5236;&#x81EA;&#x5DF1;&#x7684;&#x7CFB;&#x7EDF;/&#x7EC4;&#x4EF6;&#x5E93;&#xFF01;&#xFF01;&#xFF01;</p>
+</blockquote>
+<h3 id="&#x4E00;&#x5207;&#x4EE5;&#x7EDF;&#x4E00;&#x7684;&#x5165;&#x53E3;&#x5F00;&#x59CB;">&#x4E00;&#x5207;&#x4EE5;&#x7EDF;&#x4E00;&#x7684;&#x5165;&#x53E3;&#x5F00;&#x59CB;</h3>
+<blockquote>
+<p>&#x8FD9;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x4E8E;webpack&#x4E2D;&#x7684;entry&#x5165;&#x53E3;&#xFF0C;&#x4ECE;&#x5165;&#x53E3;&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x4E00;&#x4E2A;&#xFF0C;&#x6700;&#x7EC8;&#x53D1;&#x6563;&#x6210;&#x4E3A;&#x4E00;&#x68F5;
+<img align="absmiddle" alt=":evergreen_tree:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/evergreen_tree.png" title=":evergreen_tree:">&#xFF0C;&#x8FD9;&#x91CC;&#x501F;&#x52A9;&#x4E8E;sass&#x4E2D;&#x7684;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x91C7;&#x7528;<code>@import
+_xxx</code>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8BA9;&#x6BCF;&#x4E00;&#x4E2A;&#x5B50;&#x6A21;&#x5757;&#x4EC5;&#x4F5C;&#x4E3A;&#x5176;&#x5B50;&#x6A21;&#x5757;&#x53C2;&#x4E0E;&#x7F16;&#x8BD1;&#x5373;&#x53EF;&#xFF01;</p>
+</blockquote>
+<p><img src="bootstrap&#x4E2D;&#x5173;&#x4E8E;sass&#x6811;&#x7684;&#x7ED3;&#x6784;.png" alt="bootstrap&#x4E2D;&#x5173;&#x4E8E;sass&#x6811;&#x7684;&#x7ED3;&#x6784;"></p>
+<h3 id="&#x5E94;&#x7528;&#x5B9E;&#x6218;">&#x5E94;&#x7528;&#x5B9E;&#x6218;</h3>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x501F;&#x9274;&#x4E8E;sass&#x5728;bootstrap&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;&#x8FD9;&#x8FB9;&#x53C2;&#x8003;&#x5176;&#x8BBE;&#x8BA1;&#x539F;&#x7406;&#xFF0C;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x6A21;&#x4EFF;&#x8BBE;&#x8BA1;&#xFF0C;&#x5E76;&#x4ECE;&#x4E2D;&#x5F97;&#x51FA;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF0C;&#x5E2E;&#x52A9;&#x81EA;&#x5DF1;&#x5728;&#x5B9E;&#x9645;&#x7684;
+&#x9879;&#x76EE;&#x8BBE;&#x8BA1;&#x5F00;&#x59CB;&#x9636;&#x6BB5;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E3A;&#x540E;&#x7EED;&#x7075;&#x6D3B;&#x6269;&#x5C55;&#x505A;&#x597D;&#x57FA;&#x7840;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+</blockquote>
+<p><img src="sass&#x7EDF;&#x4E00;&#x5165;&#x53E3;.png" alt="sass&#x7EDF;&#x4E00;&#x5165;&#x53E3;"></p>
+<h4 id="1-&#x53D8;&#x91CF;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;variablescss">1. &#x53D8;&#x91CF;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;(_variable.scss)</h4>
+<p>&#x4F5C;&#x4E3A;&#x7CFB;&#x7EDF;&#x4E2D;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x63D0;&#x4F9B;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;(&#x6216;&#x7EC4;&#x4EF6;&#x5E93;)&#x7684;&#x7EDF;&#x4E00;&#x914D;&#x7F6E;&#x5316;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#x7EDF;&#x4E00;&#x91C7;&#x7528;<code>!default</code>&#x6807;&#x5FD7;&#x4EE3;&#x8868;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x5141;&#x8BB8;&#x88AB;&#x914D;&#x7F6E;&#x7684;&#xFF0C;
+&#x5F53;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5141;&#x8BB8;&#x901A;&#x8FC7;&#x91CD;&#x8F7D;&#x53D8;&#x91CF;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x7684;&#x76EE;&#x7684;&#xFF1B;</p>
+<h4 id="2-&#x53D8;&#x91CF;&#x7684;&#x5206;&#x6A21;&#x5757;&#x7BA1;&#x7406;">2. &#x53D8;&#x91CF;&#x7684;&#x5206;&#x6A21;&#x5757;&#x7BA1;&#x7406;</h4>
+<p>&#x53EF;&#x9488;&#x5BF9; <img align="absmiddle" alt=":point_up_2:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/point_up_2.png" title=":point_up_2:">
+&#x4E2D;&#x7684;<code>_variable.scss</code>&#x4E2D;&#x6240;&#x51FA;&#x73B0;&#x7684;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x5206;&#x6A21;&#x5757;&#x7BA1;&#x7406;&#xFF0C;&#x5EFA;&#x8BAE;&#x53EF;&#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x6CE8;&#x91CA;&#x6A21;&#x5757;&#x6765;&#x8FDB;&#x884C;&#x7EF4;&#x62A4;&#x7BA1;&#x7406;&#xFF1B;</p>
+<h4 id="3--&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x57FA;&#x51C6;&#x6570;&#x636E;&#x6E90;">3. <img align="absmiddle" alt=":stars:" class="emoji" src="../gitbook/gitbook-plugin-advanced-emoji/emojis/stars.png" title=":stars:"> &#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x57FA;&#x51C6;&#x6570;&#x636E;&#x6E90;</h4>
+<p>&#x4F5C;&#x4E3A;&#x5176;&#x4ED6;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x5F85;&#x5F15;&#x7528;&#x7684;&#x57FA;&#x51C6;&#x6570;&#x636E;&#x6E90;(&#x53EF;&#x4EE5;&#x662F;&#x5BF9;&#x8C61;&#x3001;&#x6570;&#x7EC4;)&#xFF0C;&#x7136;&#x540E;&#x5176;&#x4ED6;&#x7684;&#x6A21;&#x5757;&#x4F9D;&#x8D56;&#x6B64;&#x914D;&#x7F6E;&#x5316;&#x53C2;&#x6570;&#xFF0C;&#x9488;&#x5BF9;&#x57FA;&#x51C6;&#x6570;&#x636E;&#x6E90;&#x505A;&#x4E00;&#x4E2A;&#x4E8C;&#x6B21;&#x5C01;&#x88C5;&#x7684;&#x673A;&#x5236;&#xFF0C;
+&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x573A;&#x666F;&#x4E0B;&#x7684;&#x6837;&#x5F0F;&#x7EC4;&#x5408;</p>
+<h4 id="4-root&#x7684;&#x5168;&#x5C40;&#x914D;&#x7F6E;">4. _root&#x7684;&#x5168;&#x5C40;&#x914D;&#x7F6E;</h4>
+<p>&#x914D;&#x5408;css&#x53D8;&#x91CF;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x7684;css&#x53D8;&#x91CF;&#x4E0E;<code>_variable.scss</code>&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x914D;&#x5408;&#xFF0C;&#x5F62;&#x6210;&#x5168;&#x5C40;&#x7684;css&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x7528;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x53BB;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;</p>
+<h4 id="5-&#x884D;&#x751F;&#x5176;&#x4ED6;&#x6A21;&#x5757;">5. &#x884D;&#x751F;&#x5176;&#x4ED6;&#x6A21;&#x5757;</h4>
+<p>&#x5C06;&#x7EDF;&#x4E00;&#x7684;&#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x57FA;&#x51C6;&#x914D;&#x7F6E;&#xFF0C;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;<code>_function.scss</code>&#x3001;<code>_mixin.scss</code>&#x3001;<code>_reboot.scss</code>&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x6A21;&#x5757;&#x7684;&#x88AB;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF0C;
+&#x6839;&#x636E;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x62C6;&#x5206;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x677F;&#x5757;</p>
+<p><footer class="footer"><div class="footer__container--normal" alt="
+https://www.91temaichang.com/sass-in-boostrap/readme.html
+">
+<img src="data:image/gif;base64,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" width="170" height="170"></div></footer></p>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">91temaichang.com<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x3001;APP&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#x3001;&#x67B6;&#x6784;&#x5E08;&#x3001;&#x9879;&#x76EE;&#x7BA1;&#x7406;</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; &#x90D1;&#x803F;&#x6797; all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">&#x6700;&#x65B0;&#x66F4;&#x65B0;&#x4E8E;</span>
+2022-07-19 23:47:46
+</p></div></div><div class="box__issues">
+
+</div>
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../build-in-modules/readme.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 预设库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"sass在bootstrap中的使用","level":"1.11","depth":1,"previous":{"title":"预设库","level":"1.10","depth":1,"path":"build-in-modules/readme.md","ref":"build-in-modules/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","back-to-top-button","custom-favicon","chapter-fold","code","donate","insert-logo","page-copyright","codepens","search-pro","pageview-count","advanced-emoji","page-toc-button","seo","devops"],"root":"","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"codepens":{},"search-pro":{},"page-copyright":{"wisdom":"前端开发者、APP开发工程师、架构师、项目管理","noPowered":true,"copyright":"Copyright &#169; 郑耿林","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"91temaichang.com","baseUri":"https://www.91temaichang.com/","copyrightColor":"#666","description":"最新更新于"},"codepen":{"height":600,"theme":13200,"description":"改造不一样的css","defaultTab":"html"},"code":{"copyButtons":false},"donate":{"title":"","button":"捐赠","wechat":"/donate/wechat_code.png","alipay":"/donate/alipay_code.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"favicon.png","page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"seo":{"titlePrefix":"像编写Javacript一样来写样式-","titleSuffix":"-zhenggl","descriptionPrefix":"像编写Javacript一样来写样式","keywords":"zhenggl, sass, scss, css, style, 郑耿林"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"devops":{"bd_token":"28deffb3f03b6aebaee957d706ef8068","google_search":"","google_analytics":"","livere_token":""},"insert-logo":{"url":"/favicon.png","style":"background: none;"}},"theme":"default","author":"郑耿林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"像编写Javacript一样来写样式","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.91temaichang.com"}},"gitbook":"*","description":"从不同角度解析关于sass知识点，结合实际项目实战来掌握学习sass"},"file":{"path":"sass-in-boostrap/readme.md","mtime":"2022-07-19T15:47:46.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-06T02:44:15.595Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codepens/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-devops/devops.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

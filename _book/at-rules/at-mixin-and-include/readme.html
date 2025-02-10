@@ -1,0 +1,744 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>像编写Javacript一样来写样式-@mixin-@include-zhenggl</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="像编写Javacript一样来写样式-@mixin-@include"><meta name="keywords" content="zhenggl, sass, scss, css, style, 郑耿林">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="郑耿林">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../at-function/readme.html" />
+    
+    
+    <link rel="prev" href="../at-import/readme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.91temaichang.com" target="_blank" rel="nofollow" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../preface/readme.html">
+            
+                <a href="../../preface/readme.html">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../syntax/readme.html">
+            
+                <a href="../../syntax/readme.html">
+            
+                    
+                    语法知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../style-rules/readme.html">
+            
+                <a href="../../style-rules/readme.html">
+            
+                    
+                    样式规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../variables/readme.html">
+            
+                <a href="../../variables/readme.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../interpolation/readme.html">
+            
+                <a href="../../interpolation/readme.html">
+            
+                    
+                    插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    "艾特"规则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../at-use/readme.html">
+            
+                <a href="../at-use/readme.html">
+            
+                    
+                    @use
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../at-forward/readme.html">
+            
+                <a href="../at-forward/readme.html">
+            
+                    
+                    @forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../at-import/readme.html">
+            
+                <a href="../at-import/readme.html">
+            
+                    
+                    @import
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    @mixin-@include
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../at-function/readme.html">
+            
+                <a href="../at-function/readme.html">
+            
+                    
+                    @function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../at-extend/readme.html">
+            
+                <a href="../at-extend/readme.html">
+            
+                    
+                    @extend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../at-error/readme.html">
+            
+                <a href="../at-error/readme.html">
+            
+                    
+                    @error
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../at-warn/readme.html">
+            
+                <a href="../at-warn/readme.html">
+            
+                    
+                    @warn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../at-debug/readme.html">
+            
+                <a href="../at-debug/readme.html">
+            
+                    
+                    @debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../at-at-root/readme.html">
+            
+                <a href="../at-at-root/readme.html">
+            
+                    
+                    @at-root
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../flow-control/readme.html">
+            
+                <a href="../flow-control/readme.html">
+            
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../from-css/readme.html">
+            
+                <a href="../from-css/readme.html">
+            
+                    
+                    与css的兼容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../values/readme.html">
+            
+                <a href="../../values/readme.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../operators/readme.html">
+            
+                <a href="../../operators/readme.html">
+            
+                    
+                    操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../build-in-modules/readme.html">
+            
+                <a href="../../build-in-modules/readme.html">
+            
+                    
+                    预设库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../sass-in-boostrap/readme.html">
+            
+                <a href="../../sass-in-boostrap/readme.html">
+            
+                    
+                    sass在bootstrap中的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="_blank" rel="nofollow" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >@mixin-@include</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mixin&#x4E0E;include">@mixin&#x4E0E;@include</h1>
+<blockquote>
+<p><code>@mixin</code>&#x4E0E;<code>@include</code>&#x4E00;&#x822C;&#x6210;&#x5BF9;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5F15;&#x5165;&#x3002;<code>@mixin</code>&#x4E0E;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;&#x6DF7;&#x5165;&#x601D;&#x60F3;&#x4E00;&#x81F4;&#xFF0C;&#x65E8;&#x5728;&#x63D0;&#x4F9B;&#x4E00;&#x5957;<strong>&#x53EF;&#x91CD;&#x590D;&#x4F7F;&#x7528;</strong>&#x7684;<strong>&#x53EF;&#x914D;&#x7F6E;&#x5316;</strong>&#x7684;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x5176;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;
+<img src="&#x6DF7;&#x5165;&#x7684;&#x7EC4;&#x6210;.png" alt="&#x6DF7;&#x5165;&#x7684;&#x7EC4;&#x6210;"><br><img align="absmiddle" alt=":point_up:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/point_up.png" title=":point_up:">
+&#x8FD9;&#x91CC;&#x7ED3;&#x5408;&#x4E86;&#x51FD;&#x6570;&#x4E0E;&#x6837;&#x5F0F;&#x800C;&#x5F62;&#x6210;&#x7684;&#x4E00;&#x79CD;&#x65B0;&#x578B;&#x4EA7;&#x7269;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x901A;&#x8FC7;<code>@include</code>&#x6765;&#x5F15;&#x5165;&#xFF0C;<code>@include</code>&#x7684;&#x89C4;&#x5219;&#x4F1A;&#x968F;&#x7740;<code>@mixin</code>&#x5B9A;&#x4E49;&#x65F6;&#x7684;&#x89C4;&#x5219;&#x800C;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982;&#x4F20;&#x9012;&#x4E86;&#x53C2;&#x6570;(&#x6216;&#x8005;&#x5217;&#x8868;&#x3001;&#x6216;&#x8005;map&#x3001;&#x6216;&#x8005;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;)&#x800C;&#x5B9A;&#xFF0C;&#x5176;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;
+<code>@include &lt;mixin_name&gt; (&lt;argument...&gt;)</code></p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-comment">// _module.scss</span>
+@<span class="hljs-keyword">mixin</span> blue-font{
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">color</span>: blue;
+}
+<span class="hljs-comment">// demo1.scss</span>
+@use <span class="hljs-string">&apos;module&apos;</span>;
+<span class="hljs-selector-class">.content</span>{
+  @<span class="hljs-keyword">include</span> module.blue-font;
+}
+</code></pre>
+<p><img src="@mixin&#x4E0E;@include&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;.png" alt="@mixin&#x4E0E;@include&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;"></p>
+<p><img align="absmiddle" alt=":warning:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/warning.png" title=":warning:">
+&#x56E0;&#x4E3A;&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x4E2D;&#x6A2A;&#x7EBF;&#x4E0E;&#x4E0B;&#x5212;&#x7EBF;&#x6240;&#x5B9A;&#x4E49;&#x7684;mixin&#x540D;&#x79F0;&#xFF0C;&#x4E24;&#x8005;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x610F;&#x601D;&#xFF01;&#xFF01;&#xFF01;</p>
+<h3 id="mixin&#x7684;&#x53C2;&#x6570;">mixin&#x7684;&#x53C2;&#x6570;</h3>
+<blockquote>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x51FD;&#x6570;&#xFF0C;<code>@mixin</code>&#x5141;&#x8BB8;&#x643A;&#x5E26;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5141;&#x8BB8;&#x643A;&#x5E26;&#x53C2;&#x6570;&#x5C06;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;&#x53D8;&#x6210;&#x5177;&#x6709;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x80FD;&#x529B;&#x7684;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;</p>
+</blockquote>
+<pre><code class="lang-scss"><span class="hljs-comment">// demo2.scss</span>
+@<span class="hljs-keyword">mixin</span> padding-num (<span class="hljs-variable">$size</span>){
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$size</span>;
+}
+
+<span class="hljs-selector-class">.content</span>{
+    @<span class="hljs-keyword">include</span> padding-num(<span class="hljs-number">20px</span>);
+}
+</code></pre>
+<p><img src="@mixin&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;.png" alt="@mixin&#x51FD;&#x6570;&#x7684;&#x4F7F;&#x7528;"></p>
+<h4 id="&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;">&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;</h4>
+<blockquote>
+<p>&#x4E0E;ES6.0&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x89E3;&#x6784;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;<code>@mixin</code>&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x5316;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x7684;<code>@mixin</code>&#x4E2D;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5168;&#x90FD;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x8FDB;&#x884C;&#x53EF;&#x9009;&#x6027;&#x4F20;&#x9012;&#xFF0C;&#x6765;&#x8FBE;&#x5230;&#x4E0D;&#x540C;&#x6548;&#x679C;&#x7684;<code>@mixin</code>&#x8F93;&#x51FA;</p>
+</blockquote>
+<pre><code class="lang-scss">@<span class="hljs-keyword">mixin</span> optional-argument(<span class="hljs-variable">$size</span>, <span class="hljs-variable">$radius</span>: 0){
+  <span class="hljs-attribute">width</span>: <span class="hljs-variable">$size</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-variable">$size</span>;
+  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$radius</span> != 0 {
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$radius</span>;
+  }
+}
+<span class="hljs-selector-class">.content</span>{
+  @<span class="hljs-keyword">include</span> optional-argument(<span class="hljs-number">20px</span>, 10px);
+}
+</code></pre>
+<p><img src="@mixin&#x53EF;&#x9009;&#x53C2;&#x6570;&#x7684;&#x8F93;&#x51FA;.png" alt="@mixin&#x53EF;&#x9009;&#x53C2;&#x6570;&#x7684;&#x8F93;&#x51FA;"></p>
+<h4 id="&#x50CF;map&#x4E00;&#x6837;&#x7684;&#x53C2;&#x6570;">&#x50CF;map&#x4E00;&#x6837;&#x7684;&#x53C2;&#x6570;</h4>
+<blockquote>
+<p>&#x5728;&#x901A;&#x8FC7; <img align="absmiddle" alt=":point_up:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/point_up.png" title=":point_up:">
+&#x53EF;&#x9009;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4F7F;&#x7528;<code>@mixin</code>&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x50CF;<em>map</em>&#x4E2D;&#x7684;<code>key*value</code>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6765;&#x63D0;&#x4F9B;<em>&#x65E0;&#x5E8F;&#x5316;&#x4F20;&#x53C2;</em>&#x7684;&#x673A;&#x5236;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x63A5;&#x6536;
+($1:0,$2:1,$3:2)&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x53EA;&#x60F3;&#x4F20;&#x9012;&#x5176;&#x4E2D;&#x7684;$2&#x7684;&#x503C;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53EA;&#x4F20;&#x9012;($2:10)&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6765;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x8FBE;&#x5230;&#x65E0;&#x9700;&#x4E25;&#x683C;&#x5173;&#x6CE8;&#x6BCF;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+</blockquote>
+<pre><code class="lang-scss">@<span class="hljs-keyword">mixin</span> mapArgument(<span class="hljs-variable">$s1</span>: 0, <span class="hljs-variable">$s2</span>: 0, <span class="hljs-variable">$s3</span>: 0){
+  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$s1</span> != 0 {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-variable">$s1</span>;
+  }
+  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$s2</span> != 0 {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-variable">$s2</span>;
+  }
+  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$s3</span> != 0 {
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">$s3</span>;
+  }
+}
+<span class="hljs-selector-class">.content</span>{
+  @<span class="hljs-keyword">include</span> mapArgument(<span class="hljs-variable">$s2</span>: 10px);
+}
+</code></pre>
+<p><img src="@mixin&#x4F20;&#x9012;&#x65E0;&#x5E8F;&#x53C2;&#x6570;.png" alt="@mixin&#x4F20;&#x9012;&#x65E0;&#x5E8F;&#x53C2;&#x6570;"> <img align="absmiddle" alt=":point_up:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/point_up.png" title=":point_up:">
+&#x4ECE;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;<code>@mixin</code>&#x5B9A;&#x4E49;&#x4E86;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;mixin&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x4F20;&#x9012;&#x4E86;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;$s2&#xFF0C;&#x65E0;&#x9700;&#x5173;&#x5FC3;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x51FA;&#x73B0;&#x5728;&#x7B2C;&#x51E0;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x662F;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x5B9A;&#x4E49;&#x7684;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7684;key&#x7684;&#x540D;&#x79F0;&#x5373;&#x53EF;&#xFF0C;
+&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;&#x7F16;&#x5199;&#x7684;<code>@mixin</code>&#x7684;&#x7075;&#x6D3B;&#x5EA6;&#xFF01;&#xFF01;</p>
+<h4 id="&#x53EF;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;">&#x53EF;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;</h4>
+<blockquote>
+<p>&#x8FD9;&#x4E0E;ES6.0&#x4E2D;&#x7684;<em>&#x5BF9;&#x8C61;/&#x6570;&#x7EC4;&#x6269;&#x5C55;&#x7B26;</em>&#x6709;&#x4E9B;&#x76F8;&#x7C7B;&#x4F3C;&#xFF0C;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x4F20;&#x53C2;&#x540E;&#xFF0C;&#x52A0;&#x591A;&#x4E00;&#x4E2A;<code>...</code>&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x8BE5;&#x53C2;&#x6570;&#x53D8;&#x91CF;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5C55;&#x5F00;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6765;&#x5B9E;&#x73B0;&#x5BF9;<em>&#x6570;&#x7EC4;/&#x5BF9;&#x8C61;</em>&#x7684;&#x5904;&#x7406;(&#x6BD4;&#x5982;for&#x5FAA;&#x73AF;)</p>
+</blockquote>
+<pre><code class="lang-scss">@<span class="hljs-keyword">mixin</span> spreadArray(<span class="hljs-variable">$argument</span>...){
+  @<span class="hljs-keyword">for</span> <span class="hljs-variable">$i</span> from 0 to length(<span class="hljs-variable">$argument</span>){
+    #{nth(<span class="hljs-variable">$argument</span>, <span class="hljs-variable">$i</span> + 1)} {
+      <span class="hljs-attribute">position</span>: absolute;
+      <span class="hljs-attribute">margin-top</span>: <span class="hljs-variable">$i</span> * <span class="hljs-number">100</span>;
+    }
+  }
+}
+@<span class="hljs-keyword">include</span> spreadArray(<span class="hljs-string">&quot;input.name&quot;</span>, <span class="hljs-string">&quot;input.address&quot;</span>, <span class="hljs-string">&quot;input.zip&quot;</span>);
+</code></pre>
+<p><img src="@mixin&#x4F20;&#x9012;&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;.png" alt="@mixin&#x4F20;&#x9012;&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;"></p>
+<p><img align="absmiddle" alt=":star2:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/star2.png" title=":star2:"> &#x63A5;&#x6536;&#x4E00;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x53C2;&#x6570;</p>
+<pre><code class="lang-scss">@use <span class="hljs-string">&quot;sass:meta&quot;</span>;
+@<span class="hljs-keyword">mixin</span> spreadObj(<span class="hljs-variable">$argument</span>...){
+  @<span class="hljs-keyword">debug</span> meta.keywords(<span class="hljs-variable">$argument</span>);
+  @<span class="hljs-keyword">each</span> <span class="hljs-variable">$name</span>, <span class="hljs-variable">$color</span> in meta.keywords(<span class="hljs-variable">$argument</span>){
+    <span class="hljs-selector-tag">pre</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.stx-</span>#{<span class="hljs-variable">$name</span>}{
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color</span>;
+    }
+  }
+}
+@<span class="hljs-keyword">include</span> spreadObj(
+  <span class="hljs-variable">$string</span>: <span class="hljs-number">#009</span>,
+  <span class="hljs-variable">$comment</span>: <span class="hljs-number">#812</span>,
+  <span class="hljs-variable">$variable</span>: <span class="hljs-number">#531</span>
+)
+</code></pre>
+<p><img src="@mixin&#x4F20;&#x9012;&#x4E00;&#x5BF9;&#x8C61;.png" alt="@mixin&#x4F20;&#x9012;&#x4E00;&#x5BF9;&#x8C61;"></p>
+<h3 id="&#x50CF;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x601D;&#x8003;&#x6765;&#x4F20;&#x9012;&#x4EE3;&#x7801;&#x5757;">&#x50CF;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x601D;&#x8003;&#x6765;&#x4F20;&#x9012;&#x4EE3;&#x7801;&#x5757;</h3>
+<blockquote>
+<p>&#x50CF;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x6A21;&#x5757;&#x4E00;&#x6837;&#x6765;&#x601D;&#x8003;&#xFF0C;<code>@mixin</code>&#x5141;&#x8BB8;&#x5C06;&#x4E00;&#x6574;&#x5757;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x8BCD;<code>@content</code>&#x6765;&#x4F20;&#x9012;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x4E4B;&#x540E;&#xFF0C;mixin&#x4F7F;&#x7528;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x50CF;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x6765;&#x7F16;&#x5199;&#x6837;&#x5F0F;&#x4EE3;&#x7801;&#x5757;&#x4E86;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-scss">@<span class="hljs-keyword">mixin</span> hover{
+  &amp;:hover{
+    @<span class="hljs-keyword">content</span>;
+  }
+}
+<span class="hljs-selector-tag">button</span>{
+  @<span class="hljs-keyword">include</span> hover{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#2aa198</span>;
+    <span class="hljs-attribute">color</span>: white;
+  }
+}
+</code></pre>
+<p><img src="@mixin&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5757;mixin.png" alt="@mixin&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5757;mixin"></p>
+<p><img align="absmiddle" alt=":star2:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/star2.png" title=":star2:">
+<code>@content</code>&#x662F;mixin&#x7684;mixin&#xFF0C;&#x56E0;&#x4E3A;mixin&#x539F;&#x672C;&#x5C31;&#x662F;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x800C;<code>@content</code>&#x662F;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x5360;&#x4F4D;&#x7B26;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x50CF;<code>@mixin</code>&#x6765;&#x601D;&#x8003;&#xFF0C;&#x63D0;&#x4F9B;&#x53C2;&#x6570;&#x7684;&#x673A;&#x5236;&#xFF0C;
+&#x6765;&#x751F;&#x6210;&#x52A8;&#x6001;&#x7684;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x662F;&#xFF1A;<br>&#x5B9A;&#x4E49;&#xFF1A;<br><code>@content (&lt;arguments...&gt;)</code></p>
+<p>&#x4F7F;&#x7528;&#xFF1A;<br><code>@include &lt;mixin_name&gt; (&lt;mixin_arguments...&gt;) using
+(&lt;content_arguments&gt;) { // &#x4EE3;&#x7801;&#x5757; }</code></p>
+<pre><code class="lang-scss">@<span class="hljs-keyword">mixin</span> media(<span class="hljs-variable">$types</span>...) {
+  @<span class="hljs-keyword">each</span> <span class="hljs-variable">$type</span> in <span class="hljs-variable">$types</span> {
+    @<span class="hljs-keyword">media</span> #{<span class="hljs-variable">$type</span>} {
+      @<span class="hljs-keyword">content</span>(<span class="hljs-variable">$type</span>);
+    }
+  }
+}
+
+@<span class="hljs-keyword">include</span> media(screen, print) using (<span class="hljs-variable">$type</span>) {
+  <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">40px</span>;
+    @<span class="hljs-keyword">if</span> <span class="hljs-variable">$type</span> == print {
+      <span class="hljs-attribute">font-family</span>: Calluna;
+    }
+  }
+}
+</code></pre>
+<p><img src="@mixin&#x4E2D;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x5757;.png" alt="@mixin&#x4E2D;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x5757;"></p>
+<p><footer class="footer"><div class="footer__container--normal" alt="
+https://www.91temaichang.com/at-rules/at-mixin-and-include/readme.html
+">
+<img src="data:image/gif;base64,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" width="170" height="170"></div></footer></p>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">91temaichang.com<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x3001;APP&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#x5E08;&#x3001;&#x67B6;&#x6784;&#x5E08;&#x3001;&#x9879;&#x76EE;&#x7BA1;&#x7406;</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; &#x90D1;&#x803F;&#x6797; all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">&#x6700;&#x65B0;&#x66F4;&#x65B0;&#x4E8E;</span>
+2022-07-05 05:48:06
+</p></div></div><div class="box__issues">
+
+</div>
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../at-import/readme.html" class="navigation navigation-prev " aria-label="Previous page: @import">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../at-function/readme.html" class="navigation navigation-next " aria-label="Next page: @function">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"@mixin-@include","level":"1.7.4","depth":2,"next":{"title":"@function","level":"1.7.5","depth":2,"path":"at-rules/at-function/readme.md","ref":"at-rules/at-function/readme.md","articles":[]},"previous":{"title":"@import","level":"1.7.3","depth":2,"path":"at-rules/at-import/readme.md","ref":"at-rules/at-import/readme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","back-to-top-button","custom-favicon","chapter-fold","code","donate","insert-logo","page-copyright","codepens","search-pro","pageview-count","advanced-emoji","page-toc-button","seo","devops"],"root":"","styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"codepens":{},"search-pro":{},"page-copyright":{"wisdom":"前端开发者、APP开发工程师、架构师、项目管理","noPowered":true,"copyright":"Copyright &#169; 郑耿林","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"91temaichang.com","baseUri":"https://www.91temaichang.com/","copyrightColor":"#666","description":"最新更新于"},"codepen":{"height":600,"theme":13200,"description":"改造不一样的css","defaultTab":"html"},"code":{"copyButtons":false},"donate":{"title":"","button":"捐赠","wechat":"/donate/wechat_code.png","alipay":"/donate/alipay_code.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"favicon.png","page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"seo":{"titlePrefix":"像编写Javacript一样来写样式-","titleSuffix":"-zhenggl","descriptionPrefix":"像编写Javacript一样来写样式","keywords":"zhenggl, sass, scss, css, style, 郑耿林"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"devops":{"bd_token":"28deffb3f03b6aebaee957d706ef8068","google_search":"","google_analytics":"","livere_token":""},"insert-logo":{"url":"/favicon.png","style":"background: none;"}},"theme":"default","author":"郑耿林","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"像编写Javacript一样来写样式","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.91temaichang.com"}},"gitbook":"*","description":"从不同角度解析关于sass知识点，结合实际项目实战来掌握学习sass"},"file":{"path":"at-rules/at-mixin-and-include/readme.md","mtime":"2022-07-04T21:48:06.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-06T02:44:15.595Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codepens/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-devops/devops.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

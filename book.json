@@ -1,0 +1,81 @@
+{
+	"root": "",
+	"title": "像编写Javacript一样来写样式",
+	"description": "从不同角度解析关于sass知识点，结合实际项目实战来掌握学习sass",
+	"author": "郑耿林",
+	"language": "zh-hans",
+	"links": {
+		"sidebar": {
+			"我的博客": "https://www.91temaichang.com"
+		}
+	},
+	"styles": {
+		"website": "styles/website.css"
+	},
+	"plugins": [
+		"-lunr",
+		"-search",
+		"back-to-top-button",
+		"custom-favicon",
+		"chapter-fold",
+		"code",
+		"donate",
+		"insert-logo",
+		"page-copyright",
+		"codepens",
+		"search-pro",
+		"pageview-count",
+		"advanced-emoji",
+		"page-toc-button",
+		"seo",
+		"devops"
+	],
+	"pluginsConfig": {
+		"favicon": "favicon.png",
+		"chapter-fold": {},
+		"code": {
+			"copyButtons": false
+		},
+		"donate": {
+			"wechat": "/donate/wechat_code.png",
+			"alipay": "/donate/alipay_code.png",
+			"button": "捐赠"
+		},
+		"insert-logo": {
+			"url": "/favicon.png",
+			"style": "background: none;"
+		},
+		"page-copyright": {
+			"baseUri": "https://www.91temaichang.com/",
+			"description": "最新更新于",
+			"signature": "91temaichang.com",
+			"wisdom": "前端开发者、APP开发工程师、架构师、项目管理",
+			"format": "YYYY-MM-dd hh:mm:ss",
+			"copyright": "Copyright &#169; 郑耿林",
+			"timeColor": "#666",
+			"copyrightColor": "#666",
+			"utcOffset": "8",
+			"style": "normal",
+			"noPowered": true
+		},
+		"codepen": {
+			"height": 600,
+			"theme": 13200,
+			"description": "改造不一样的css",
+			"defaultTab": "html"
+		},
+		"page-toc-button": {
+			"maxTocDepth": 2,
+			"minTocSize": 2
+		},
+		"seo": {
+			"titlePrefix": "像编写Javacript一样来写样式-",
+			"titleSuffix": "-zhenggl",
+			"descriptionPrefix": "像编写Javacript一样来写样式",
+			"keywords": "zhenggl, sass, scss, css, style, 郑耿林"
+		},
+		"devops": {
+			"bd_token": "28deffb3f03b6aebaee957d706ef8068"
+		}
+	}
+}
